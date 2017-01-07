@@ -45,7 +45,7 @@ public class FizzBuzzTest {
 	 * Tests that original number is returned if not divisible by either 3 or 5
 	 */
 	@Test
-	public void getResultShouldReturnTheSameNumberIfNoOtherRequirementIsFulfilled() {
+	public void getResultShouldReturnTheSameNumberIfNotDivisibleByEither3or5() {
 		Assert.assertEquals("1", FizzBuzz.getResult(1));
 		Assert.assertEquals("2", FizzBuzz.getResult(2));
 		Assert.assertEquals("4", FizzBuzz.getResult(4));
