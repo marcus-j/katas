@@ -1,0 +1,1 @@
+Create an efficient stack O(1) complexity for all operations that offers a max method that provides direct access to the currently largest value on the stack.
