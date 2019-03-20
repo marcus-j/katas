@@ -2,19 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.marcusjanke.katas</groupId>
+    <parent>
+        <groupId>de.marcusjanke</groupId>
+        <artifactId>katas</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 	<artifactId>happy-numbers</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>happy-numbers</name>
 	<description>This a sample solution for the function kata &quot;happy numbers&quot;. See http://ccd-school.de/coding-dojo/function-katas/froehliche-zahlen/</description>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
 
 	<dependencies>
 		<dependency>
