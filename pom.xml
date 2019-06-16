@@ -21,5 +21,6 @@
         <module>happy-numbers</module>
         <module>max-stack</module>
         <module>roman-numerals-converter</module>
+        <module>rot-13</module>
     </modules>
 </project>
