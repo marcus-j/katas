@@ -22,5 +22,6 @@
         <module>max-stack</module>
         <module>roman-numerals-converter</module>
         <module>rot-13</module>
+        <module>binary-operation-counter</module>
     </modules>
 </project>
