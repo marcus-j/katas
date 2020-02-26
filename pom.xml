@@ -23,5 +23,6 @@
         <module>roman-numerals-converter</module>
         <module>rot-13</module>
         <module>binary-operation-counter</module>
+        <module>battleship</module>
     </modules>
 </project>
