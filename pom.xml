@@ -24,5 +24,6 @@
         <module>rot-13</module>
         <module>binary-operation-counter</module>
         <module>battleship</module>
+        <module>load-balancer</module>
     </modules>
 </project>
