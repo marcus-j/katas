@@ -21,4 +21,4 @@ public boolean solution(int[] requestDurations) ;
 ```
 
 * The `request durations` defines a given list of request durations with between 5 and 100.000 items.
-* The `return value` of the method returns _true_ if an equally distributed load balancing is possible and false otherwise.
+* The `return value` of the method returns _true_ if an equally distributed load balancing is possible and _false_ otherwise.
