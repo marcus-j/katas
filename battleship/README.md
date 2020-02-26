@@ -1,6 +1,6 @@
 # Battleship Kata
 
-So what's the task? For a given state of the game [Battleship](https://en.wikipedia.org/wiki/Battleship_(game), 
+So what's the task? For a given state of the game [Battleship](https://en.wikipedia.org/wiki/Battleship_(game)), 
 we would like to know how many ships have been partially hit and how many ships have been fully hit (aka sunk) so far.
 
 ## Interface
