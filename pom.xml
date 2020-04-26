@@ -22,6 +22,8 @@
         <mockito-core.version>2.21.0</mockito-core.version>
         <mockito-junit-jupiter.version>2.23.0</mockito-junit-jupiter.version>
         <commons-codec.version>1.14</commons-codec.version>
+        <commons-lang3.version>3.10</commons-lang3.version>
+        <slf4j-simple.version>1.7.30</slf4j-simple.version>
     </properties>
 
     <modules>
@@ -63,6 +65,11 @@
                 <version>${commons-codec.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj-core.version}</version>
@@ -80,6 +87,13 @@
                 <version>${mockito-junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j-simple.version}</version>
+                <scope>test</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
