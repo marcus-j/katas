@@ -11,9 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <junit-jupiter-api.version>5.6.0</junit-jupiter-api.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <modules>
@@ -26,6 +25,7 @@
         <module>binary-operation-counter</module>
         <module>battleship</module>
         <module>load-balancer</module>
+        <module>bloom-filter</module>
     </modules>
 
     <dependencyManagement>
@@ -36,6 +36,25 @@
                 <version>${junit-jupiter-api.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
