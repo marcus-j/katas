@@ -1,5 +1,6 @@
 package de.marcusjanke.katas.spellchecker.dictionaries;
 
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.stream.Stream;
 
 import static java.lang.String.format;
 
+@EqualsAndHashCode
 @RequiredArgsConstructor
 class LineSeparatedStringResourceDictionary implements Dictionary<String> {
 
