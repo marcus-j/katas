@@ -14,6 +14,6 @@ class LineSeparatedStringResourceDictionaryTest {
         final String resourcePath = "/dictionary/test_dictionary.txt";
         final Dictionary<String> dictionary = new LineSeparatedStringResourceDictionary(resourcePath);
 
-        assertThat(dictionary.stream().collect(toUnmodifiableList())).containsExactlyInAnyOrder("test1", "test2");
+        assertThat(dictionary.stream().collect(toUnmodifiableList())).containsExactlyInAnyOrder("test1", "test11");
     }
 }
