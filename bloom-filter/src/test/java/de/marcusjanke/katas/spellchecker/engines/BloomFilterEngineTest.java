@@ -4,21 +4,19 @@ import de.marcusjanke.katas.spellchecker.dictionaries.Dictionary;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.function.ToIntFunction;
-
 import static de.marcusjanke.katas.spellchecker.dictionaries.Dictionaries.lineSeparatedStringResourceDictionary;
+import static de.marcusjanke.katas.spellchecker.engines.HashFunctions.STRING_LENGTH;
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BloomFilterEngineTest {
 
-    private static final ToIntFunction<String> HASH_BY_STRING_LENGTH_FUNCTION = String::length;
-
     @Test
     @DisplayName("should use dictionary for initial load of bloom filter")
     void shouldUseDictionaryForInitialLoadOfBloomFilter() {
-        final BloomFilterEngine<String> bloomFilterEngine = new BloomFilterEngine<>(10, HASH_BY_STRING_LENGTH_FUNCTION);
+        final BloomFilterEngine<String> bloomFilterEngine = new BloomFilterEngine<>(10, STRING_LENGTH);
         final String resourcePath = "/dictionary/test_dictionary.txt";
-        final Dictionary<String> dictionary = lineSeparatedStringResourceDictionary(resourcePath);
+        final Dictionary<String> dictionary = lineSeparatedStringResourceDictionary(resourcePath, UTF_8);
 
         bloomFilterEngine.loadDictionary(dictionary);
 

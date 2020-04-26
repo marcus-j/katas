@@ -5,16 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import java.util.function.ToIntFunction;
 
+import static de.marcusjanke.katas.spellchecker.engines.HashFunctions.STRING_LENGTH;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BloomFilterTest {
 
-    private static final ToIntFunction<String> HASH_BY_STRING_LENGTH_FUNCTION = String::length;
-
     @Test
     @DisplayName("should apply a given hash function for updating the underlying bit set")
     void shouldApplyHashFunction() {
-        final BloomFilter<String> bloomFilter = new BloomFilter<>(3, HASH_BY_STRING_LENGTH_FUNCTION);
+        final BloomFilter<String> bloomFilter = new BloomFilter<>(3, STRING_LENGTH);
         bloomFilter.putElement("");
         bloomFilter.putElement("1");
 
@@ -26,7 +25,7 @@ class BloomFilterTest {
     @Test
     @DisplayName("should limit bit set size and truncate longer hashes by applying a modulo operation. Hence, setting 'wrongish' bits")
     void shouldLimitBitSetSize() {
-        final BloomFilter<String> bloomFilter = new BloomFilter<>(2, HASH_BY_STRING_LENGTH_FUNCTION);
+        final BloomFilter<String> bloomFilter = new BloomFilter<>(2, STRING_LENGTH);
         bloomFilter.putElement("1");
         bloomFilter.putElement("11");
 

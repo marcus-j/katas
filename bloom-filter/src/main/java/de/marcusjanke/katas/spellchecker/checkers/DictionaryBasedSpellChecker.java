@@ -2,7 +2,9 @@ package de.marcusjanke.katas.spellchecker.checkers;
 
 import de.marcusjanke.katas.spellchecker.dictionaries.Dictionary;
 import de.marcusjanke.katas.spellchecker.engines.Engine;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode
 class DictionaryBasedSpellChecker implements SpellChecker {
 
     private final Engine<String> engine;
