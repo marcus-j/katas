@@ -1,8 +1,11 @@
 package de.marcusjanke.katas.spellchecker.engines;
 
+import lombok.EqualsAndHashCode;
+
 import java.util.BitSet;
 import java.util.function.ToIntFunction;
 
+@EqualsAndHashCode
 class BloomFilter<T> {
 
     private final BitSet bitSet;
